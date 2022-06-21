@@ -12,12 +12,7 @@ export class DonaComponent implements AfterContentInit {
   @Input() titulo: string = 'Sin Titulo';
   @Input() labels: string[] = [];
   @Input() data:   number[]= [];
-  @Input() backgroundColor:string[]= []; 
-  constructor(){ 
-    console.log(this.data) 
-    console.log(this.labels) 
-    console.log(this.titulo) 
-  }
+  @Input() backgroundColor:string[]= [];  
   ngAfterContentInit() { 
     this.doughnutChartData= {
       labels: this.labels,
