@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component'; 
-import { NopagefountComponent } from './nopagefount/nopagefount.component';  
+import { NopagefountComponent } from './nopagefount/nopagefount.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NopagefountComponent,
+    NopagefountComponent, 
     
   ],
   imports: [
