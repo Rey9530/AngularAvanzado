@@ -1,9 +1,8 @@
+import { environment } from "src/environments/environment";
 
-export interface Usuario {
-}
+const base_url = environment.base_url;
 
-
-export class usuario {
+export class Usuario {
 
     constructor( 
         public nombre: string,
@@ -15,6 +14,16 @@ export class usuario {
         public uid?:    string,
     ){
         
+    } 
+
+    get getImgane(){
+        if(this.img?.includes('http')){
+            return this.img;
+        }else if(this.img){
+            return `${base_url}/uploads/usuarios/${this.img}`;
+        }else{
+            return `${base_url}/uploads/usuarios/no-image`;
+        }
     }
 
 }
