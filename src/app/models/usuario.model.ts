@@ -17,7 +17,9 @@ export class Usuario {
     } 
 
     get getImgane(){
-        if(this.img?.includes('http')){
+        if(!this.img){
+            return `${base_url}/uploads/usuarios/no-image`;
+        }else if(this.img?.includes('http')){
             return this.img;
         }else if(this.img){
             return `${base_url}/uploads/usuarios/${this.img}`;
